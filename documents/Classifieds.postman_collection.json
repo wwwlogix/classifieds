@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "dd77d256-3d19-4f95-a5db-43208f2ff642",
+		"name": "Classifieds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9713145"
+	},
+	"item": [
+		{
+			"name": "Insert new Ad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": \"test subject 1\",\r\n    \"body\": \"test body 1\",\r\n    \"price\": 12765,\r\n    \"email\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/classifieds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"classifieds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch existing ads",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/classifieds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"classifieds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort By Price Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/classifieds?sort=price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"classifieds"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "price"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort By Price Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/classifieds?sort=-price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"classifieds"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "-price"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort By Date Asc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/classifieds?sort=date",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"classifieds"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "date"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort By Date Desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/classifieds?sort=-date",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"classifieds"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "-date"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ad",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/classifieds/632918df080617b0bce0f388",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"classifieds",
+						"632918df080617b0bce0f388"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
